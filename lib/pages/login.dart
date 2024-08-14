@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/pages/verification.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -202,12 +203,20 @@ class loginState extends State<login> {
                       tileMode: TileMode.clamp,
                     ).createShader(bounds);
                   },
-                  child: Text(
-                    "Forgot your password?",
-                    style: GoogleFonts.roboto(
-                        fontWeight: FontWeight.bold,
-                        fontSize: size.width * 0.035,
-                        color: Colors.white),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const verification()),
+                      );
+                    },
+                    child: Text(
+                      "Forgot your password?",
+                      style: GoogleFonts.roboto(
+                          fontWeight: FontWeight.bold,
+                          fontSize: size.width * 0.035,
+                          color: Colors.white),
+                    ),
                   ),
                 ),
                 SizedBox(height: size.height * 0.03),

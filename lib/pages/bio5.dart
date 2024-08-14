@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_delivery/pages/location.dart';
 import 'package:food_delivery/pages/login.dart';
+import 'package:food_delivery/pages/success1.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -127,7 +128,7 @@ class _bio5State extends State<bio5> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const login()),
+                      MaterialPageRoute(builder: (context) => const Success1()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
